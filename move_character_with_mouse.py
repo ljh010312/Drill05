@@ -24,7 +24,12 @@ def random_hand_point():
 
 
 def move_character(point_x, point_y):
-    
+    global x, y
+
+    t = 0.03
+    x = (1 - t) * x + t * point_x
+    y = (1 - t) * y + t * point_y
+
     pass
 
 running = True

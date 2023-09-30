@@ -24,12 +24,16 @@ def random_hand_point():
 
 
 def move_character(point_x, point_y):
-    global x, y
+    global x, y, arrow_x, arrow_y
+
 
     t = 0.03
     x = (1 - t) * x + t * point_x
     y = (1 - t) * y + t * point_y
 
+    dis = math.sqrt( (point_x - x) ** 2 + (point_y - y) ** 2 )
+    if dis < 5:
+        arrow_x, arrow_y = random_hand_point()
     pass
 
 running = True
@@ -50,6 +54,7 @@ while running:
     update_canvas()
     frame = (frame + 1) % 8
     handle_events()
+    delay(0.01)
 
 close_canvas()
 

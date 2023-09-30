@@ -20,17 +20,16 @@ def handle_events():
     pass
 
 def random_hand_point():
-    pass
+    return random.randint(0, TUK_WIDTH), random.randint(0, TUK_HEIGHT)
+
 
 def move_character(point_x, point_y):
+    
     pass
-
-
-
 
 running = True
 x, y = TUK_WIDTH // 2, TUK_HEIGHT // 2
-arrow_x, arrow_y = TUK_WIDTH // 2, TUK_HEIGHT // 2
+arrow_x, arrow_y = random_hand_point()
 frame = 0
 hide_cursor()
 

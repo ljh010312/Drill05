@@ -21,7 +21,6 @@ def handle_events():
 def random_hand_point():
     return random.randint(0, TUK_WIDTH), random.randint(0, TUK_HEIGHT)
 
-
 def move_character(point_x, point_y):
     global x, y, arrow_x, arrow_y, dir
 
